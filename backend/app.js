@@ -28,7 +28,7 @@ app.use(
   cors({
     origin: "https://kaalavastha-app.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
