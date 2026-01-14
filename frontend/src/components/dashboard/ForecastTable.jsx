@@ -6,7 +6,11 @@ const ForecastTable = ({ limit, paginated }) => {
   const [showAll, setShowAll] = React.useState(false);
 
   // If paginated, show 7 initially, else show limit or all
-  const displayCount = paginated ? (showAll ? 15 : 7) : limit || forecast.length;
+  const displayCount = paginated
+    ? showAll
+      ? 15
+      : 7
+    : limit || forecast.length;
   const displayedForecast = forecast.slice(0, displayCount);
 
   const tempUnit = unit === "metric" ? "°C" : "°F";
@@ -40,12 +44,22 @@ const ForecastTable = ({ limit, paginated }) => {
 
           <tbody className="divide-y divide-gray-100">
             {displayedForecast.map((day, index) => (
-              <tr key={index} className="transition hover:bg-yellow-400 text-gray-700">
-                <td className="px-4 py-3 font-medium text-gray-900">{day.date}</td>
+              <tr
+                key={index}
+                className="transition hover:bg-yellow-400 text-gray-700"
+              >
+                <td className="px-4 py-3 font-medium text-gray-900">
+                  {day.date}
+                </td>
                 <td className="px-4 py-3">{day.condition}</td>
-                <td className="px-4 py-3">{day.temp}{tempUnit}</td>
+                <td className="px-4 py-3">
+                  {day.temp}
+                  {tempUnit}
+                </td>
                 <td className="px-4 py-3">{day.humidity}%</td>
-                <td className="px-4 py-3">{day.wind} {windUnit}</td>
+                <td className="px-4 py-3">
+                  {day.wind} {windUnit}
+                </td>
               </tr>
             ))}
           </tbody>

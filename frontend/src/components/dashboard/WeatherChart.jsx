@@ -47,9 +47,15 @@ function WeatherChart() {
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis dataKey="day" stroke="#9ca3af" tick={{ fill: "#4b5563" }} />
             <YAxis stroke="#9ca3af" tick={{ fill: "#4b5563" }} />
-            <Tooltip 
-              contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px', color: '#1f2937', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-              formatter={(value) => [`${value}${unitLabel}`, "Temp"]} 
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#fff",
+                border: "1px solid #e5e7eb",
+                borderRadius: "8px",
+                color: "#1f2937",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+              }}
+              formatter={(value) => [`${value}${unitLabel}`, "Temp"]}
             />
             <Line
               type="monotone"

@@ -4,8 +4,7 @@ const API_kEY = import.meta.env.VITE_WEATHER_API_KEY;
 const BASE_URL = "https://api.openweathermap.org/data/2.5";
 
 const weatherApi = axios.create({
-  baseURL: BASE_URL,
-  timeout: 10000,
+  timeout: 1000000,
 });
 
 export const getCurrentWeather = async (city, unit) => {
