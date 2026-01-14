@@ -1,12 +1,6 @@
 # WeatherApp
 
-;; ![WeatherApp Demo](https://kalavastha-application.netlify.app)
-;; ![WeatherApp Demo](frontend/public/images/weather_app_image.png)
 [![WeatherApp Demo](frontend/public/images/weather_app_image.png)](https://kalavastha-application.netlify.app/)
-
-;; ## 🚀 Live Demo
-
-;; 👉 https://kalavastha-application.netlify.app/
 
 ## Overview
 
