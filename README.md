@@ -1,6 +1,6 @@
 # WeatherApp
 
-![WeatherApp Demo](https://raw.githubusercontent.com/your-username/WeatherApp/main/screenshots/demo.png)
+![WeatherApp Demo](https://kalavastha-application.netlify.app)
 
 ## Overview
 
@@ -23,13 +23,13 @@
 
 ## Tech Stack
 
-| Layer               | Technology                                                                     |
-| ------------------- | ------------------------------------------------------------------------------ |
-| **Frontend**        | React 18, Vite, JavaScript, CSS (custom design system), Chart.js, React Router |
-| **Backend**         | Node.js, Express, JavaScript, JWT, Multer (file uploads)                       |
-| **APIs**            | OpenWeatherMap (weather data), custom internal APIs                            |
-| **Version Control** | Git, GitHub                                                                    |
-| **Deployment**      | Vercel / Netlify (frontend) + Render / Railway (backend)                       |
+| Layer               | Technology                                                                               |
+| ------------------- | ---------------------------------------------------------------------------------------- |
+| **Frontend**        | React 18, Vite, JavaScript, CSS (custom design system), Chart.js, React Router ,Tailwind |
+| **Backend**         | Node.js, Express, JavaScript, JWT, Multer (file uploads)                                 |
+| **APIs**            | OpenWeatherMap (weather data), custom internal APIs                                      |
+| **Version Control** | Git, GitHub                                                                              |
+| **Deployment**      | Netlify (frontend) + Render (backend)                                                    |
 
 ---
 
@@ -45,7 +45,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/WeatherApp.git
+git clone https://github.com/athul457/Weather-app
 cd WeatherApp/weatherApp
 
 # Install frontend dependencies
@@ -62,7 +62,7 @@ npm install
 Create a `.env` file in the `backend` directory with the following keys:
 
 ```dotenv
-PORT=5000
+PORT=3224
 JWT_SECRET=your_jwt_secret
 OPENWEATHER_API_KEY=your_openweather_api_key
 ```
@@ -71,6 +71,7 @@ OPENWEATHER_API_KEY=your_openweather_api_key
 
 ```bash
 # Start the backend (in a terminal)
+
 cd backend
 npm run dev
 
@@ -79,7 +80,7 @@ cd ../frontend
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:5000`.
+The frontend will be available at `http://localhost:5173` and the backend at `http://localhost:3224`.
 
 ---
 
