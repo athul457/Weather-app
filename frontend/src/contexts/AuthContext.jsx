@@ -20,13 +20,17 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:3224/api/v1/admin/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      // const response = await fetch("http://localhost:3224/api/v1/admin/login", {
+      const response = await fetch(
+        "https://weather-app-fr8r.onrender.com/api/v1/admin/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -37,11 +41,11 @@ export const AuthProvider = ({ children }) => {
       console.log("Login Successful, Token:", data.token);
 
       if (!data.token) {
-         throw new Error("No token received from server");
+        throw new Error("No token received from server");
       }
 
       setToken(data.token);
-      
+
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify({ email }));
 
@@ -54,13 +58,17 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password) => {
     try {
-      const response = await fetch("http://localhost:3224/api/v1/admin/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
+      const response = await fetch(
+        // "http://localhost:3224/api/v1/admin/register",
+        "https://weather-app-fr8r.onrender.com/api/v1/admin/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, password }),
+        }
+      );
 
       const data = await response.json();
 
@@ -96,11 +104,15 @@ export const AuthProvider = ({ children }) => {
         headers["Content-Type"] = "application/json";
       }
 
-      const response = await fetch("http://localhost:3224/api/v1/admin/profile", {
-        method: "PUT",
-        headers,
-        body: isFormData ? profileData : JSON.stringify(profileData),
-      });
+      const response = await fetch(
+        // "http://localhost:3224/api/v1/admin/profile",
+        "https://weather-app-fr8r.onrender.com/api/v1/admin/profile",
+        {
+          method: "PUT",
+          headers,
+          body: isFormData ? profileData : JSON.stringify(profileData),
+        }
+      );
 
       const data = await response.json();
 
